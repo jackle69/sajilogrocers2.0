@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Category Grid View</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #5f0303e7;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 80%;
+    max-width: 1200px;
+    padding: 20px;
+  }
+  .category {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  }
+  .category h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    color: #333;
+  }
+  .category p {
+    margin: 0;
+    font-size: 16px;
+    color: #666;
+  }
+</style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="category">
+      <h2>Stationary Items</h2>
+      <p>Explore our wide range of stationary products.</p>
+    </div>
+    <div class="category">
+      <h2>General Store</h2>
+      <p>Find all your daily needs at our general store.</p>
+    </div>
+    <div class="category">
+      <h2>Medical Store</h2>
+      <p>Get your medical supplies and healthcare products here.</p>
+    </div>
+  </div>
+</body>
+</html>

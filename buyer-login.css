@@ -1,0 +1,70 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #5c0909; /* Main background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+.login-container {
+    text-align: center;
+    background: white; /* Background color for login container */
+    padding: 2em 2em;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    color: #333;
+}
+.login-header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 1em;
+}
+.login-main form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 1em;
+}
+.login-main form label {
+    text-align: left;
+    color: #333;
+    font-weight: bold;
+}
+.login-main form input {
+    padding: 0.75em;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.login-main form button {
+    background-color: #7a1c1c; /* Primary button color */
+    color: white;
+    border: none;
+    padding: 0.75em 1.5em;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+.login-main form button:hover {
+    background-color: #5c0909;
+}
+.login-main .forgot-password,
+.login-main .signup-link {
+    display: block;
+    margin-top: 10px;
+    color: #5c0909;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s;
+}
+.login-main .forgot-password:hover,
+.login-main .signup-link:hover {
+    color: #333;
+}

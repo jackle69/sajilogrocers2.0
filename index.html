@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sajilogrocers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Sajilo GrocerS</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">Cart</a>
+            <a href="#" onclick="showLogin()">Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="products">
+            <h2>Products</h2>
+            <label for="category-select">Choose a category:</label>
+            <select id="category-select" onchange="filterByCategory()">
+                <option value="all">All</option>
+                <option value="electronics">Electronics</option>
+                <option value="clothing">Clothing</option>
+                <option value="books">Books</option>
+            </select>
+            <div class="product" data-category="electronics">
+                <img src="images/product3.png" alt="Smartphone">
+                <h3>Smartphone</h3>
+                <p>Price: Rs.50000</p>
+                <button onclick="addToCart('Smartphone', 50000)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="clothing">
+                <img src="images/product1.jpg" alt="T-Shirt">
+                <h3>T-Shirt</h3>
+                <p>Price: Rs.20</p>
+                <button onclick="addToCart('T-Shirt', 20)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="books">
+                <img src="images/product2.jpg" alt="Book">
+                <h3>Book</h3>
+                <p>Price: Rs.15</p>
+                <button onclick="addToCart('Book', 15)">Add to Cart</button>
+            </div>
+            <!-- Add more products as needed -->
+        </section>
+
+        <section id="cart">
+            <h2>Shopping Cart</h2>
+            <ul id="cart-items">
+                <!-- Cart items will be added here dynamically -->
+            </ul>
+            <p>Total: Rs.<span id="total">0</span></p>
+            <button onclick="checkout()">Checkout</button>
+        </section>
+    </main>
+
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLogin()">&times;</span>
+            <h2>Login</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <button onclick="login()">Login</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/66671fa1981b6c56477b9e03/1i01d74ee';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+</body>
+</html>
